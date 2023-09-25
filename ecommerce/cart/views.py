@@ -33,7 +33,7 @@ def contact(request):
         pnumber = request.POST.get("pnumber")
         myquery = Contact(name=name,email=email,desc=desc,phone=pnumber)
         myquery.save()
-        messages.info(request,"Our Team will get back you soon...")
+        messages.info(request,"Our Team will get back you soon")
         return render(request,"contact.html")
 
     return render(request,"contact.html")
